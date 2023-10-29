@@ -1,0 +1,16 @@
+﻿@model ApplicationUser
+@{
+    ViewData["Title"] = "Datails";
+}
+
+<h1>User Datails</h1>
+
+<div>
+    <partial name="PartialViews/DatailsDeleteUserPartialView" />
+
+
+    @*<a asp-action="Edit" asp-route-Id="Id"  class="btn btn-warning mt-1"> <i class="fas fa-edit"></i> Edit</a>*@
+
+    <a asp-action="Index" class="btn btn-primary mt-1"> <i class="fas fa-arrow-left"></i> Back To List</a>
+
+</div>

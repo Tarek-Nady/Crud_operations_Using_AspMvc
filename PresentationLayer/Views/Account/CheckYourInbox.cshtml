@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "CheckYourInbox";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+
+<section class="sign-in mt-5">
+    <div class="container mt-5 p-2 card shadow">
+        <div class="row p-5">
+         
+            <div class="d-flex justify-content-center  col-md-6 py-3 pl-md-4 ">
+               
+                <p>
+                    Password Reset Link has been sent to your email , Please check your Inbox :)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section ValidationScriptSection
+    {
+        <partial name="_ValidationScriptsPartial" />
+}

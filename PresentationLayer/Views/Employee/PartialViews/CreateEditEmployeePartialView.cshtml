@@ -1,0 +1,72 @@
+﻿@model EmployeeViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@inject IDepartmentRepository departmentRepository;
+@{
+    var Departments = new SelectList( await departmentRepository.GetAll(), "Id", "Name");
+}
+
+   <div class="form-group">   
+        <label class="col-form-label" asp-for="Name"> </label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Image"></label>
+    <input class="form-control" asp-for="Image" />
+   @* <span asp-validation-for="Image" class="text-danger"></span>*@
+</div>
+
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Age"></label>
+        <input type="text" class="form-control" asp-for="Age" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Address"></label>
+        <input  class="form-control" asp-for="Address" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Salary"></label>
+        <input class="form-control" asp-for="Salary" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="IsActive"></label>
+        <input class="form-control" asp-for="IsActive" />
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+
+     <div class="form-group">
+        <label class="col-form-label" asp-for="Email"></label>
+        <input  class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+     <div class="form-group">
+    <label class="col-form-label" asp-for="Phone"></label>
+        <input  class="form-control" asp-for="Phone" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="HireDate"></label>
+        <input class="form-control" asp-for="HireDate" />
+        <span asp-validation-for="HireDate" class="text-danger"></span>
+    </div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="DepartmentId"></label>
+   
+    <select asp-for="DepartmentId" class="form-control" asp-items="Departments">
+        <option value="@null">-- SelectDepatment --</option>
+    </select>
+</div>
